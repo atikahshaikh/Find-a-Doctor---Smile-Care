@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find dental doctors and explore their specialties at Smile Care Karachi.">
+    <title>Find a Doctor | Smile Care</title>
+
+    <link rel="stylesheet" href="doctors.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-tooth"></i>
+                <span>Smile<span class="logo-highlight">Care</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="doctors.html" class="active">Find a Doctor</a>
+                <a href="contact.html">Contact</a>
+                <a href="appointment.html" class="nav-btn">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="doctor-hero">
+
+        <div class="hero-content">
+            <span class="section-label">YOUR DENTAL CARE STARTS HERE</span>
+
+            <h1>Find The Right <span>Doctor</span> For Your Smile</h1>
+
+            <p>
+                Explore dental professionals, compare their specialties
+                and find a suitable doctor for your dental care needs.
+            </p>
+
+            <div class="hero-info">
+                <div>
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span>Explore Doctors</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Appointment Requests</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=85" alt="Dental healthcare professional">
+        </div>
+
+    </section>
+
+
+    <!-- Search Section -->
+    <section class="search-section">
+
+        <div class="search-heading">
+            <span class="section-label">OUR DENTAL PROFESSIONALS</span>
+            <h2>Find Your Dentist</h2>
+            <p>Search and filter doctors according to your requirements.</p>
+        </div>
+
+        <div class="filter-box">
+
+            <div class="filter-group search-group">
+                <label for="doctorSearch">Search Doctor</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="doctorSearch" placeholder="Enter doctor name...">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label for="specialtyFilter">Specialization</label>
+                <select id="specialtyFilter">
+                    <option value="">All Specialties</option>
+                    <option value="General Dentistry">General Dentistry</option>
+                    <option value="Orthodontics">Orthodontics</option>
+                    <option value="Oral Surgery">Oral Surgery</option>
+                    <option value="Endodontics">Endodontics</option>
+                    <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="locationFilter">Location</label>
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                    <option value="PECHS">PECHS</option>
+                    <option value="Gulshan-e-Iqbal">Gulshan-e-Iqbal</option>
+                    <option value="DHA">DHA</option>
+                    <option value="Clifton">Clifton</option>
+                    <option value="Malir">Malir</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="availabilityFilter">Availability</label>
+                <select id="availabilityFilter">
+                    <option value="">Any Availability</option>
+                    <option value="Available Today">Available Today</option>
+                    <option value="Available Tomorrow">Available Tomorrow</option>
+                </select>
+            </div>
+
+            <button class="reset-btn" id="resetFilters">
+                <i class="fa-solid fa-rotate-left"></i> Reset
+            </button>
+
+        </div>
+
+        <div class="results-info">
+            <p id="resultsCount" aria-live="polite">Showing 6 doctors</p>
+            <span>Demo doctor profiles</span>
+        </div>
+
+    </section>
+
+
+    <!-- Doctor Cards -->
+    <section class="doctors-section">
+
+        <div class="doctor-grid" id="doctorGrid">
+
+            <!-- Doctor 1 -->
+            <div class="doctor-card"
+                data-name="Ayesha Khan"
+                data-specialty="General Dentistry"
+                data-location="PECHS"
+                data-availability="Available Today">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=47" alt="Demo profile of Dr. Ayesha Khan">
+                    <span class="availability available">Available Today</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">General Dentistry</span>
+                    <h3>Dr. Ayesha Khan</h3>
+                    <p class="qualification">BDS, MDS (Demo qualification)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 8 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> PECHS, Karachi</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 1,500</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Doctor 2 -->
+            <div class="doctor-card"
+                data-name="Ahmed Raza"
+                data-specialty="Orthodontics"
+                data-location="DHA"
+                data-availability="Available Tomorrow">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=12" alt="Demo profile of Dr. Ahmed Raza">
+                    <span class="availability tomorrow">Available Tomorrow</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">Orthodontics</span>
+                    <h3>Dr. Ahmed Raza</h3>
+                    <p class="qualification">BDS, FCPS (Demo qualification)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 6 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> DHA, Karachi</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 2,000</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Doctor 3 -->
+            <div class="doctor-card"
+                data-name="Sara Malik"
+                data-specialty="Pediatric Dentistry"
+                data-location="Gulshan-e-Iqbal"
+                data-availability="Available Today">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=44" alt="Demo profile of Dr. Sara Malik">
+                    <span class="availability available">Available Today</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">Pediatric Dentistry</span>
+                    <h3>Dr. Sara Malik</h3>
+                    <p class="qualification">BDS, Diploma in Pediatric Dentistry (Demo)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 5 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Gulshan-e-Iqbal</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 1,200</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Doctor 4 -->
+            <div class="doctor-card"
+                data-name="Usman Ali"
+                data-specialty="Oral Surgery"
+                data-location="Clifton"
+                data-availability="Available Tomorrow">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=60" alt="Demo profile of Dr. Usman Ali">
+                    <span class="availability tomorrow">Available Tomorrow</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">Oral Surgery</span>
+                    <h3>Dr. Usman Ali</h3>
+                    <p class="qualification">BDS, FCPS (Demo qualification)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 10 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Clifton, Karachi</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 2,500</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Doctor 5 -->
+            <div class="doctor-card"
+                data-name="Fatima Noor"
+                data-specialty="Endodontics"
+                data-location="Malir"
+                data-availability="Available Today">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=49" alt="Demo profile of Dr. Fatima Noor">
+                    <span class="availability available">Available Today</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">Endodontics</span>
+                    <h3>Dr. Fatima Noor</h3>
+                    <p class="qualification">BDS, MDS (Demo qualification)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 7 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Malir, Karachi</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 1,800</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Doctor 6 -->
+            <div class="doctor-card"
+                data-name="Bilal Hassan"
+                data-specialty="Cosmetic Dentistry"
+                data-location="DHA"
+                data-availability="Available Today">
+
+                <div class="doctor-image">
+                    <img src="https://i.pravatar.cc/400?img=13" alt="Demo profile of Dr. Bilal Hassan">
+                    <span class="availability available">Available Today</span>
+                </div>
+
+                <div class="doctor-details">
+                    <span class="specialty">Cosmetic Dentistry</span>
+                    <h3>Dr. Bilal Hassan</h3>
+                    <p class="qualification">BDS, Diploma in Cosmetic Dentistry (Demo)</p>
+
+                    <div class="doctor-meta">
+                        <span><i class="fa-solid fa-briefcase"></i> 9 Years Experience</span>
+                        <span><i class="fa-solid fa-location-dot"></i> DHA, Karachi</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div>
+                            <small>Consultation Fee</small>
+                            <strong>Rs. 2,200</strong>
+                        </div>
+                        <a href="appointment.html" class="book-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- No Results -->
+        <div class="no-results" id="noResults">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>No Doctors Found</h3>
+            <p>Try changing your search or filters.</p>
+            <button id="clearSearch">Clear Filters</button>
+        </div>
+
+    </section>
+
+
+    <!-- Help Section -->
+    <section class="help-section">
+        <div class="help-icon">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+
+        <div class="help-content">
+            <h2>Need Help Finding a Doctor?</h2>
+            <p>Explore our doctors or contact the clinic for assistance.</p>
+        </div>
+
+        <a href="contact.html" class="help-btn">Contact Us <i class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-grid">
+
+            <div class="footer-about">
+                <a href="index.html" class="logo footer-logo">
+                    <i class="fa-solid fa-tooth"></i>
+                    <span>Smile<span class="logo-highlight">Care</span></span>
+                </a>
+
+                <p>
+                    Caring for your oral health and helping you discover
+                    the confidence of a healthy smile.
+                </p>
+
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="doctors.html">Find a Doctor</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <h3>Our Services</h3>
+                <a href="services.html">General Dentistry</a>
+                <a href="services.html">Teeth Whitening</a>
+                <a href="services.html">Dental Implants</a>
+                <a href="services.html">Orthodontics</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</p>
+                <p><i class="fa-solid fa-phone"></i> Contact details coming soon</p>
+                <p><i class="fa-solid fa-clock"></i> Clinic timings to be confirmed</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Smile Care. All rights reserved.</p>
+
+            <div>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- Chatbot -->
+    <button class="chatbot-btn" id="chatbotBtn" aria-label="Open chatbot">
+        <i class="fa-solid fa-comment-dots"></i>
+    </button>
+
+    <div class="chatbot-box" id="chatbotBox">
+
+        <div class="chatbot-header">
+            <div>
+                <i class="fa-solid fa-tooth"></i>
+                <strong>Smile Care Assistant</strong>
+            </div>
+
+            <button id="closeChat" aria-label="Close chatbot">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="chatbot-body">
+            <div class="bot-message">
+                Hello! Welcome to Smile Care. Looking for a dentist? I can help you explore our demo doctor profiles.
+            </div>
+            <p class="chatbot-note">This is a demo assistant, not a medical advice service.</p>
+        </div>
+
+        <div class="chatbot-footer">
+            <input type="text" id="chatInput" placeholder="Type your message..." aria-label="Your message">
+            <button id="sendMessage" aria-label="Send message">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+
+
+    <script src="doctors.js"></script>
+
+</body>
+</html>
